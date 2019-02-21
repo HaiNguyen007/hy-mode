@@ -801,7 +801,7 @@ a string or comment."
 
 
 (defvar hy-shell-internal-update-namespace-code
-  (.set-namespace api :globals- (globals) :locals- (locals))
+  "(.set-namespace api :globals- (globals) :locals- (locals))"
   "Update the namespace used by `jedhy' to current namespace.")
 
 ;;;;; Comint
