@@ -796,10 +796,10 @@ a string or comment."
 ;;;;; Internal Process Code
 
 (defvar hy-shell-internal-setup-code
-  ;;(import [jedhy.api [API :as --API]]) (setv api (--API))
-  ;;(import [jedhy.api [API]]) (setv api (API))
-  ;;(import [jedhy.api [api]])
-  (import [jedhy.api :as api])
+  (import [jedhy.api [API :as --API]]) (setv api (--API))
+  ";;(import [jedhy.api [API]]) (setv api (API))"
+  ";;(import [jedhy.api [api]])"
+  "(import [jedhy.api :as api])"
   "Setup `jedhy' for internal process.")
 
 
