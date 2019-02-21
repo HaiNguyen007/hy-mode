@@ -796,12 +796,12 @@ a string or comment."
 ;;;;; Internal Process Code
 
 (defvar hy-shell-internal-setup-code
-  "(import [jedhy.api [API :as --API]]) (setv api (--API))"
+  (import [jedhy.api [API :as --API]]) (setv api (--API))
   "Setup `jedhy' for internal process.")
 
 
 (defvar hy-shell-internal-update-namespace-code
-  "(.set-namespace api :globals- (globals) :locals- (locals))"
+  (.set-namespace api :globals- (globals) :locals- (locals))
   "Update the namespace used by `jedhy' to current namespace.")
 
 ;;;;; Comint
