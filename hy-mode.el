@@ -1193,12 +1193,13 @@ Eldoc, Anaconda, and other hy-mode features."))
   "Format jedhy cmd for CANDIDATE and COMMAND-TYPE.
 
 It can be one of: 'annotation, 'completion, or 'eldoc."
-  (format "(.%s api \"%s\")"
-          (pcase command-type
-            ('annotation "annotate")
-            ('completion "complete")
-            ('eldoc      "docs"))
-          candidate))
+;;  (format "(.%s api \"%s\")"
+;;          (pcase command-type
+;;            ('annotation "annotate")
+;;            ('completion "complete")
+;;            ('eldoc      "docs"))
+;;          candidate)
+)
 
 
 (defun hy--jedhy-send (candidate command-type)
