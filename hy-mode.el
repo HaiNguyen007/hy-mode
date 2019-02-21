@@ -853,6 +853,11 @@ a string or comment."
   "Format a PROC-NAME with closing astericks."
   (->> proc-name (s-prepend "*") (s-append "*")))
 
+(defun hy-shell-get-process-name (&optional internal)
+  "Get process name corr. to `hy-shell-buffer-name'/`hy-shell-internal-buffer-name'."
+  (if internal
+      hy-shell-internal-buffer-name
+    hy-shell-buffer-name))
 
 (defun hy-shell-get-process (&optional internal)
   "Get process corr. to `hy-shell-buffer-name'/`hy-shell-internal-buffer-name'."
